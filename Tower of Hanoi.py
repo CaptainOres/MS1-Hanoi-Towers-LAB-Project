@@ -101,7 +101,7 @@ def start_game(mode):
         try:
             with open(file_name, 'r+') as file:
                 contents = file.readlines()
-                file.close
+                file.close()
                 print(file.closed)
         
         # 2.2 'Except' clause, if file not found:
@@ -142,7 +142,7 @@ def next_steps(mode, tower):
     Returns: NONE
     '''
     # 1. Prompting the user:
-    while mode == '1':
+    while mode == '1' or mode == '2':
         print('\n\t1 - Move a Disk\n\t2 - Save and End\n\t3 - End without Saving\n')
         user_input = input('Enter 1 or 2 or 3: ')
         
